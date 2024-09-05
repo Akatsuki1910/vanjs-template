@@ -1,0 +1,16 @@
+{
+  "name": "vanjs-template",
+  "type": "module",
+  "module": "./src/index.ts",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sass": "^1.78.0",
+    "typescript": "^5.5.4",
+    "vanjs-core": "^1.5.2",
+    "vite": "^5.4.3"
+  }
+}
