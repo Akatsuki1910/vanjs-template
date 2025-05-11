@@ -1,3 +1,31 @@
 * {
   margin: 0;
 }
+
+body {
+  height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    "container sandbox"
+    "container buttons";
+  height: 100%;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+}
+
+.container {
+  grid-area: container;
+}
+
+.sandbox {
+  grid-area: sandbox;
+  border: none;
+}
+
+.buttons {
+  grid-area: buttons;
+  background-color: gray;
+}
