@@ -1,5 +1,5 @@
 {
-  "name": "github-gif",
+  "name": "vanjs-template",
   "type": "module",
   "module": "./src/index.ts",
   "scripts": {
@@ -8,17 +8,9 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/p5": "^1.7.6",
-    "sass": "^1.87.0",
-    "typescript": "^5.8.3",
-    "vanjs-core": "^1.5.5",
-    "vite": "^6.3.5",
-    "vite-plugin-monaco-editor": "^1.1.0"
-  },
-  "dependencies": {
-    "@ffmpeg/ffmpeg": "^0.12.15",
-    "@ffmpeg/util": "^0.12.2",
-    "monaco-editor": "^0.52.2",
-    "p5": "^2.0.1"
+    "sass": "^1.78.0",
+    "typescript": "^5.5.4",
+    "vanjs-core": "^1.5.2",
+    "vite": "^5.4.3"
   }
 }
