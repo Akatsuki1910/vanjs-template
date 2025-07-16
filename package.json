@@ -8,9 +8,9 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "sass": "^1.78.0",
-    "typescript": "^5.5.4",
-    "vanjs-core": "^1.5.2",
-    "vite": "^5.4.3"
+    "sass": "^1.89.2",
+    "typescript": "^5.8.3",
+    "vanjs-core": "^1.5.5",
+    "vite": "^7.0.4"
   }
 }
