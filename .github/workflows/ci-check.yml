@@ -12,20 +12,12 @@ jobs:
     # if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.node-version'
-          cache: 'yarn'
+      - uses: oven-sh/setup-bun@v2
 
       - name: Install packages
-        run: yarn install
-      - name: Copy package.json
-        run: yarn copy:package.json
-      - name: Lint Check
-        run: yarn lint
+        run: bun install
       - name: Build Check
-        run: yarn build
+        run: bun build
   deploy:
     if: ${{ github.actor == 'dependabot[bot]' }}
     needs: ci-check
