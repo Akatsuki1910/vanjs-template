@@ -1,0 +1,32 @@
+name: ci-check
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  ci-check:
+    runs-on: ubuntu-latest
+    # if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'yarn'
+
+      - name: Install packages
+        run: yarn install
+      - name: Copy package.json
+        run: yarn copy:package.json
+      - name: Lint Check
+        run: yarn lint
+      - name: Build Check
+        run: yarn build
+  deploy:
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    needs: ci-check
+    uses: ./.github/workflows/deploy.yml
